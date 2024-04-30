@@ -1,0 +1,104 @@
+<div class="main_container_footer">
+ <div>
+  <h1>{{'Say_Hi!' | translate}}</h1>
+ </div>
+  <div class="container_subtitle">
+    <h2>{{'Footer_Title' | translate}}</h2>
+    <div>
+      <span class="invite_text">{{'Footer_Subtitle' | translate}}</span>
+    </div>
+  </div>
+  <div class="container_form">
+   
+    <div>
+      <a href="#landing">
+        <img class="arrow_up" src="/assets/img/footer_logos/arrow_up.png" alt="Scroll to top">
+      </a>
+    </div>
+
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <label for="name">Name</label>
+  <input [(ngModel)]="contactData.name" class="input_fields" type="text" id="name" name="name" placeholder="Name..." required #name="ngModel">
+  @if (!name.valid && name.touched && !name.disabled){
+    <span class="required_txt_info">{{'valid_name' | translate}}</span>
+  }
+
+  <label for="mail">E-Mail</label>
+  <input [(ngModel)]="contactData.email" class="input_fields" type="email" id="email" name="email" placeholder="E-mail..." required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
+  @if (!email.valid && email.touched && !email.disabled){
+    <span class="required_txt_info">{{'valid_mail' | translate}}</span>
+  }
+
+  <label for="message">Subject</label>
+  <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" class="input_fields" name="message" id="message" placeholder="{{'placeholder_message' | translate}}" required></textarea>
+  @if (!message.valid && message.touched && !message.disabled){
+    <span class="required_txt_info">{{'valid_message' | translate}}</span>
+  }
+  <div data-aos="fade-down" [class.feedback-visible]="showFeedback" class="feedback-message">
+    {{ feedbackMessage }}
+  </div>
+<div  style="height: 40px;">
+
+  
+</div>
+
+<div class="container_checkarea">
+
+  <input type="checkbox" id="privacyPolicyCheckbox" [(ngModel)]="contactData.agreed" name="agreed" class="checkbox-hidden pointer" required #agreed="ngModel">
+  <label for="privacyPolicyCheckbox" class="custom-checkbox"></label>
+  <span class="agree"> {{'ich_habe_die' | translate}}<a class="check_privacy" href="datenschutz"> {{'privacy_policy' | translate}}</a> {{'and_consent' | translate}}</span>
+
+</div>
+@if (!agreed.valid && !agreed.disabled){
+<span class="required_txt_info_check">{{'valid_policy' | translate}}</span>
+}
+
+<input class="send_btn" type="submit" value="{{'send_btn' | translate}}">
+
+
+    </form>
+    
+<div class="container_bottom_footer">
+
+  <div class="leftside_bottom_container">
+    <a href="index.html">
+      <img class="initial_logo" src="/assets/img/footer_logos/logo.png" alt="">
+    </a>
+    
+</div>
+
+
+<div class="rightside_bottom_container">
+
+  <a href="https://github.com/SoufianElMakhfi" target="_blank">
+    <img class="pointer socials" src="/assets/img/footer_logos/github.png" alt="GitHub">
+  </a>
+  <a href="mailto:mail@soufian-elmakhfi.com">
+    <img class="resize_mail_logo pointer socials" src="/assets/img/footer_logos/mail.png" alt="">
+  </a>
+  <a href="https://www.linkedin.com/in/soufian-el-makhfi-ab235a283/" target="_blank">
+    <img class="resize_git_logo pointer socials" src="/assets/img/footer_logos/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
+
+
+
+
+</div>
+  </div>
+</div>
+<div class="container_policy">
+  <div>
+    <a class="policy" href="impressum">{{'imprint'| translate}}</a>
+
+  </div>
+
+  <div>
+    <a class="policy" href="datenschutz">{{'privacy_policy' | translate}}</a>
+  </div>
+
+  <div>
+    <div class="copyright">&copy; <span class="name">Soufian El Makhfi 2024</span></div>
+  </div>
+</div>
+

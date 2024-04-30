@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio - Soufian El Makhfi</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://www.soufian-elmakhfi.com/assets/img/footer_logos/favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <app-root></app-root>
+
+  <!-- Einbindung von AOS JavaScript -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialisierung von AOS mit Ihren gewünschten Einstellungen
+    AOS.init({
+      offset: 200, // Verschiebung in Pixeln zu dem Punkt, ab dem die Animation startet
+      duration: 600, // Dauer der Animation in Millisekunden
+      easing: 'ease-in-sine', // Art des Übergangs
+      delay: 100, // Verzögerung der Animation in Millisekunden
+      once: true, // Animation nur einmal ausführen oder bei jedem Scrollen
+      mirror: false, // Sollen Elemente animiert werden, wenn sie aus dem Blickfeld scrollen
+      anchorPlacement: 'top-bottom', // Wie die Animation in Bezug auf den Viewport und das Element ausgelöst wird
+    });
+  </script>
+</body>
+</html>

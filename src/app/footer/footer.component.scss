@@ -1,0 +1,324 @@
+.container_subtitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+h2 {
+  font-weight: bold;
+  font-family: "Overpass";
+  color: orange;
+  font-size: 32px;
+}
+.invite_text {
+  color: white;
+  font-size: 24px;
+  font-family: "Overpass";
+}
+.container_form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.main_container_footer {
+  max-width: 1920px; 
+  width: 100%;
+  margin: 0 auto; 
+  background-color: black; 
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+
+}
+.container_checkarea {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+h1 {
+  color: white;
+  padding-left: 80px;
+  padding-top: 260px;
+  font-family: "Syna";
+  font-weight: 800;
+  font-size: 72px;
+}
+.input_fields {
+  height: 32px;
+  border: none;
+  background-color: black;
+  border-bottom: 1px white solid;
+  width: calc(100% - 60px);
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.input_fields#message {
+  height: 200px;
+  color: white;
+  border: 1px solid white;
+}
+.input_fields:focus {
+  background-color: black;
+}
+.input_fields::placeholder {
+  font-family: "Overpass";
+  color: white;
+  font-size: 16px;
+}
+.send_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 54px;
+  padding: 10px;
+  background-color: black;
+  border: 4px solid white;
+  color: white;
+  font-family: "Overpass";
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  cursor: pointer;
+  &:hover {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 4px solid black;
+    color: black;
+  }
+  &:active {
+    background-color: rgb(162, 255, 24);
+    color: black;
+    border-radius: 16px;
+  }
+}
+.agree {
+  color: white;
+  font-family: "Overpass";
+  font-size: 14px;
+}
+.agree {
+  color: #ffffff;
+  margin-left: 16px;
+}
+.required_txt_info {
+  width: 100%;
+  color: red;
+  font-family: "Overpass";
+  font-size: 12px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 60px);
+  max-width: 600px;
+  margin-bottom: 20px;
+  gap: 60px;
+}
+.required_txt_info_check {
+  color: red;
+  font-family: "Overpass";
+  font-size: 12px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 60px;  
+  
+}
+.container_bottom_footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftside_bottom_container {
+  margin-top: 8px;
+  margin-left: 32px;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+}
+.copyright {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.name {
+  font-family: "Overpass";
+  font-size: 16px;
+  margin-right: 32px;
+}
+.rightside_bottom_container {
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.resize_git_logo {
+  width: 38px;
+  margin-top: 3.5px;
+}
+.resize_mail_logo {
+  height: 40px;
+  width: 44px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.feedback-message {
+  display: none;
+  top: 20%;
+  left: 50%;
+  margin-left: 16px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  color: greenyellow;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+}
+
+.feedback-visible {
+  opacity: 1;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
+.container_policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  max-width: 1920px; 
+  width: 100%; 
+  margin: 0 auto; 
+}
+.policy {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+}
+.check_privacy{
+  text-decoration: none;
+  color: orange;
+  font-weight: 700;
+}
+
+.rightside_bottom_container img {
+  transition: transform 0.3s ease;
+}
+
+.rightside_bottom_container img:hover {
+  transform: translateY(-5px);
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.arrow_up {
+  position: absolute;
+  right: 24px;
+  animation: floatUp 2s ease-in-out infinite;
+  margin-top: 500px;
+}
+@media (max-width: 720px) {
+  h1 {
+    position: absolute;
+    font-size: 8vw;
+    padding-left: 10px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 400px;
+    font-size: 4.5vw;
+  }
+  .invite_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 4vw;
+  }
+  textarea {
+    width: 95%;
+  }
+  .container_bottom_footer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .copyright,
+  .name,
+  .initial_logo {
+    display: none;
+  }
+  .socials {
+    margin-bottom: 32px;
+    margin-top: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .send_btn {
+    margin-bottom: 16px;
+  }
+  .rightside_bottom_container {
+    margin-right: 0;
+  }
+  .arrow_up {
+    right: 12px;
+    width: 32px;
+    margin-top: 680px;
+  }
+}
+@media (max-width: 480px) {
+  .container_subtitle {
+    margin-top: 400px;
+  }
+  .arrow_up {
+    right: 12px;
+    width: 24px;
+    margin-top: 750px;
+    margin-left: 32px;
+  }
+}

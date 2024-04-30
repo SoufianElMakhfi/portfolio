@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth !important;
+}
+body {
+  background-image: url("/assets/img/background_pattern.png");
+  background-repeat: round;
+  background-clip: padding-box;
+  margin: 0;
+  font-family: "Syna";
+}
+@font-face {
+  font-family: "Syna";
+  src: url("/assets/fonts/Syne/static/Syne-Regular.ttf") format("truetype");
+  font-weight: 400; /* Normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syna";
+  src: url("/assets/fonts/Syne/static/Syne-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syna";
+  src: url("/assets/fonts/Syne/static/Syne-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syna";
+  src: url("/assets/fonts/Syne/static/Syne-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syna";
+  src: url("/assets/fonts/Syne/static/Syne-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("/assets/fonts/Overpass/Overpass-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("/assets/fonts/Overpass/Overpass-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+}

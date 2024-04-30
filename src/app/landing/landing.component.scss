@@ -1,0 +1,166 @@
+
+.main_content {
+  background-color: #fffcf3;
+  height: 100vh;
+  width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@mixin dja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes slideDownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 6.5vw;
+  font-weight: 800;
+  text-align: center;
+  animation: slideDownFadeIn 1s ease-out forwards;
+}
+.container_title {
+  margin-top: 100px;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.line {
+  background-color: black;
+  width: 40vw;
+  height: 2px;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container_line {
+  white-space: nowrap;
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: orange;
+  animation: slideInFromRight 1s ease-out forwards;
+}
+.subtitle{
+  margin-top: 24px;
+  font-size: clamp(32px, 1.5vw, 124px); 
+
+}
+
+.email {
+  text-decoration: none;
+  color: black;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: -106px;
+  bottom: 200px;
+  transition: color 0.2s ease;
+  &:hover {
+    color: orange; 
+  }
+}
+.mail_text {
+  font-family: "Overpass";
+  font-size: clamp(16px, 1.5vw, 24px); 
+  margin-left: 56px;
+}
+@keyframes moveDownSmoothly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.arrow_down {
+  animation: moveDownSmoothly 1s linear infinite;
+  position: relative;
+  bottom: 16px;
+  width: 60px;
+}
+.scroll_indicator_wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 1920px; /* Maximale Breite auf 1920px begrenzen */
+  height: 100vh; /* Vollständige Höhe, um den Scroll-Indicator zu platzieren */
+  pointer-events: none; /* Stellt sicher, dass der Wrapper keine Maus-Events blockiert */
+}
+
+/* Aktualisierter Scroll-Indicator */
+.scroll_indicator {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.scroll_down_text{
+  font-size: 24px;
+  text-align: center;
+
+
+}
+@media(min-width: 2400px){
+  .subtitle{
+    margin-top: 100px;
+  }
+  .email{
+    display: none;
+  }
+  .title{
+    font-size: 160px;
+  }
+
+}
+@media (max-width: 720px){
+  .container_line{
+    margin-top: -116px;
+    flex-direction: column;
+  }
+  .line{
+    width: 70vw;
+  }
+  .subtitle{
+    margin-top: 64px;
+    font-size: 5vw;
+  }
+}

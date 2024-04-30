@@ -1,0 +1,51 @@
+<div class="main_container">
+<nav>
+  <div (click)="toggleIcon()" class="box">
+    <div #btn class="btn not-active active">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <a href="index.html">
+    <img class="initial" src="/assets/img/elements/logo.png" alt="">
+  </a>
+  <div class="container_nav_links">
+    <a  class="nav_links" href="#about-me">{{ 'About' | translate }}</a>
+    <a class="nav_links" href="#myskills">{{ 'Skills' | translate }}</a>
+    <a class="nav_links" href="#portfolio">{{ 'Portfolio' | translate }}</a>
+    <a class="nav_links" href="#footer">{{ 'Contact' | translate }}</a>
+  </div>
+  
+
+  
+  <div #navMenu class="nav_menu">
+    <div #mobileMenu class="mobile_links_hidden mobile_links_container">
+      <a class="mobile_links" href="#about-me">{{ 'About' | translate }}&nbsp;&nbsp;</a>
+      <a class="mobile_links" href="#myskills">{{ 'Skills' | translate }}&nbsp;&nbsp;</a>
+      <a class="mobile_links" href="#portfolio">{{ 'Portfolio' | translate }}&nbsp;&nbsp;</a>
+      <a class="mobile_links" href="#footer">{{ 'Contact' | translate }}&nbsp;&nbsp;</a>
+    </div>  
+  </div>
+
+
+
+  <div class="dropdownContainer">
+    <div class="changeLanguageBtn" (click)="toggleLanguageList()">
+      <p class="dropdown_title">{{ 'language' | translate }}</p>
+      <img src="/assets/img/elements/dropdownArrow.png" alt="Dropdown" style="margin-right: 1px; width: 24px; height: 24px;">
+    </div>
+    <div class="languageList" [style.display]="showLanguages ? 'flex' : 'none'">
+      <span class="language" (click)="translate.switchLanguage('de'); toggleLanguageList()">{{'deutsch' | translate}}</span>
+      <span class="language" (click)="translate.switchLanguage('en'); toggleLanguageList()">{{'english' | translate}}</span>
+    </div>
+  </div>
+  
+
+
+</nav>
+
+</div>
+
+<router-outlet></router-outlet>
+<app-footer id="footer"></app-footer>

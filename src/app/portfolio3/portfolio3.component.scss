@@ -1,0 +1,202 @@
+.main_container_portfolio {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 300px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Syna";
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 4rem);
+  transition: all 0.1s ease;
+  &:hover {
+    color: orange;
+  }
+}
+.container_project {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70vh;
+  display: flex;
+}
+.discription_text {
+  font-family: "Overpass";
+  margin-bottom: 32px;
+  margin-right: 40px;
+}
+.left_box {
+  width: 100%;
+  height: 80%;
+  z-index: 1000;
+}
+.img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Änderung: volle Breite des Elternelements einnehmen */
+  height: 100%;
+}
+
+img {
+  width: 100%; /* Änderung: Bildbreite auf 100% setzen */
+  height: auto;
+}
+.hide {
+  width: 100%;
+  height: 80%;
+  position: relative; 
+}
+
+
+.right_box {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+
+
+.container_right_content {
+  width: 100%;
+  height: 80px;
+}
+h3 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24px;
+  margin: 0;
+  margin-right: 32px;
+}
+h2 {
+  font-size: 40px;
+  margin: 0;
+}
+.container_discription {
+  width: 100%;
+  height: 160px;
+}
+.container_title {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-family: "Syna";
+  font-weight: 800;
+}
+.container_subtitle {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 8px;
+}
+.subtitle_text {
+  font-size: 24px;
+  color: orange;
+}
+.container_discription_text {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 8px;
+}
+.container_button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 200px;
+  gap: 24px;
+}
+a{
+  text-decoration: none;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 54px;
+    padding: 10px; 
+    background-color: #fffcf3;
+    border: 4px solid black;
+    color: black;
+    font-family: 'Overpass'; 
+    transition: all 0.3s ease;
+    font-family: 'Overpass';
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    &:hover {
+      width: 200px; 
+      padding: 10px 20px; 
+    }
+  
+    &:active {
+      background-color: black;
+      color: #fffcf3;
+    }
+}
+@media (max-width: 720px) {
+  .main_container_portfolio{
+    margin-bottom: 160px;
+  }
+  .container_project {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+.container_button{
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+}
+  .right_box{
+    margin-left: 0;
+ 
+
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .container_project{
+    margin-top: 20px;
+    
+  }
+  
+  h3{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  img{
+    max-width: 400px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .container_button{
+    display: flex;
+    justify-content: center;
+  }
+  .main_container_portfolio{
+    margin-top: 100px;
+  }
+  button{
+    width: 100px;
+    margin-top: 0;
+  }
+  .hide{
+    margin-top: 100px;
+  }
+  .img_container{
+    margin-top: 100px;
+  }
+}
