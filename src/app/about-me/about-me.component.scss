@@ -100,25 +100,6 @@ button {
    display: flex; justify-content: center; 
 }
 
-.border_img{
- display: inline-block; position: relative;
-}
-.border_position {
-    position: absolute;
-    top: 32px;
-    right: -24px;
-    width: calc(100% - 32px); /* Anpassung für das translate */
-    height: calc(100% - 32px); /* Anpassung für das translate */
-    transform: translate(-16px, -16px);
-    border: 5px solid transparent;
-    box-sizing: border-box;
-    transition: border-color 0.1s ease-in-out;
-    
-    &:hover {
-      border-color: black;
-    }
-  }
-
   @media (max-width: 990px){
  .main_container_about{
   flex-direction: column;

@@ -17,19 +17,19 @@
     </div>
 
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-  <label for="name">Name</label>
+  <label for="name"></label>
   <input [(ngModel)]="contactData.name" class="input_fields" type="text" id="name" name="name" placeholder="Name..." required #name="ngModel">
   @if (!name.valid && name.touched && !name.disabled){
     <span class="required_txt_info">{{'valid_name' | translate}}</span>
   }
 
-  <label for="mail">E-Mail</label>
+  <label for="mail"></label>
   <input [(ngModel)]="contactData.email" class="input_fields" type="email" id="email" name="email" placeholder="E-mail..." required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
   @if (!email.valid && email.touched && !email.disabled){
     <span class="required_txt_info">{{'valid_mail' | translate}}</span>
   }
 
-  <label for="message">Subject</label>
+  <label for="message"></label>
   <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" class="input_fields" name="message" id="message" placeholder="{{'placeholder_message' | translate}}" required></textarea>
   @if (!message.valid && message.touched && !message.disabled){
     <span class="required_txt_info">{{'valid_message' | translate}}</span>
